@@ -1,0 +1,19 @@
+{
+  "name": "lesson-01",
+  "version": "1.0.0",
+  "description": "getting started with tensorflowjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caglardursun/TfTests.git"
+  },
+  "author": "Çağlar Dursun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caglardursun/TfTests/issues"
+  },
+  "homepage": "https://github.com/caglardursun/TfTests#readme"
+}
