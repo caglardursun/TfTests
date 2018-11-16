@@ -1,0 +1,22 @@
+{
+  "name": "lesson-01",
+  "version": "1.0.0",
+  "description": "getting started with tensorflowjs",
+  "main": "main.js",
+  "scripts": {
+    "watch": "node_modules/.bin/hs -p 8080 -o -c 5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caglardursun/TfTests.git"
+  },
+  "author": "Çağlar Dursun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caglardursun/TfTests/issues"
+  },
+  "homepage": "https://github.com/caglardursun/TfTests#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
