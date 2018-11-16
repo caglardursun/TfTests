@@ -3,32 +3,27 @@
 function setup()
 {
     noCanvas();
-    const values = [];
-    for(let i=0;i<30;i++){
+    const values = [];    
+    for(let i=0;i<15;i++){
         values[i] = random(0,100);
     }
 
-    const shape =[2,5,3];
-    const a = tf.tensor3d(values,shape,"int32");   
-    const b = tf.tensor3d(values,shape,"int32");   
+    const shapeA =[5,3];
 
-    const bb = b.transpose();
+    // const tense = tf.tensor3d(values,shape,"int32");  
+    // const vtense = tf.variable(tense);
 
-    //const c = a.mul(b);
-    const d = a.matMul(bb);
-    // a.print();
-    // b.print();
-    // bb.print();
-    // d.print();
+    const a = tf.tensor2d(values,shapeA,"int32"); 
+    const shapeB = [3,5]; 
+    const b = tf.tensor2d(values,shapeB,"int32");  
+    //const c = a.matMul(b);
 
-    // tense.data().then(function(stuff){
-    //     console.log(stuff);
-    // });
+    a.print();
+    b.print();
+    //c.print(); 
     
-
-    //Not working !!!
-    // console.log(tense.get(0));
-    // console.log(tense.get(1));
+    //tense.print();
+    
     
 }
 
