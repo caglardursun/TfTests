@@ -3,31 +3,29 @@
 function setup()
 {
     noCanvas();
+    frameRate(25);
+}
+
+function draw()
+{
+
+
     const values = [];    
     for(let i=0;i<15;i++){
         values[i] = random(0,100);
     }
 
-    const shapeA =[5,3];
+    const shape =[5,3];
 
     // const tense = tf.tensor3d(values,shape,"int32");  
     // const vtense = tf.variable(tense);
 
-    const a = tf.tensor2d(values,shapeA,"int32"); 
-    const shapeB = [3,5]; 
-    const b = tf.tensor2d(values,shapeB,"int32");  
-    //const c = a.matMul(b);
+    const b = tf.tensor2d(values,shape,"int32");  
+    const a = tf.tensor2d(values,shape,"int32");     
 
-    a.print();
-    b.print();
-    //c.print(); 
+    const bT = b.transpose();
+    const c = a.matMul(bT);
     
-    //tense.print();
-    
-    
-}
 
-function draw()
-{
 
 }
