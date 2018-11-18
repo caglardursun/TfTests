@@ -1,6 +1,8 @@
+import * as tf from '@tensorflow/tfjs';
 // - 2 inputs 
 // - 4 hidden layer 
 // - 3 output (classification) 
+
 
 //This is the model
 const model = tf.sequential();
@@ -18,6 +20,7 @@ model.add(hiddenLayer);
 //Another layer
 const output = tf.layers.dense({
     units:3, //node number again
+    inputShape:[4],
     //inputShape:[4], you don't need to define Coz output of inputlayer also input of this hidden layer
     activation:'sigmoid'
 });
@@ -34,7 +37,7 @@ model.compile({
     loss:'meanSquaredError'
 });
 
-let inputs = tf.tensor1d([0.25,0.92],"float32");
+let inputs = tf.tensor2d([[0.25,0.92]]);
 let outputs = model.predict(inputs);
 
-output.print();
+outputs.print();
