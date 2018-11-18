@@ -1,14 +1,17 @@
 {
-  "name": "lesson-01",
+  "name": "lesson-03",
   "version": "1.0.0",
-  "description": "getting started with tensorflowjs",
+  "description": "tensorflow test application",
   "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "watch": "node_modules/.bin/hs -p 8080 -o -c 5"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caglardursun/TfTests.git"
+    "url": "git+ssh://git@github.com/caglardursun/TfTests.git"
   },
   "author": "Çağlar Dursun",
   "license": "ISC",
@@ -16,8 +19,8 @@
     "url": "https://github.com/caglardursun/TfTests/issues"
   },
   "homepage": "https://github.com/caglardursun/TfTests#readme",
-  "devDependencies": {
-    "http-server": "^0.11.1",
-    "tfjs": "^0.6.0"
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.13.5",
+    "node-gyp": "^3.8.0"
   }
 }

@@ -1,33 +1,27 @@
-/// <reference path="lib/p5.global-mode.d.ts" />
+var tf = require("@tensorflow/tfjs");
 
-function setup()
-{
-    noCanvas();
-    const values = [];    
-    for(let i=0;i<15;i++){
-        values[i] = random(0,100);
-    }
+const model = tf.sequential();
+//shape means dimensions 
 
-    const shapeA =[5,3];
+const hidden = tf.layers.dense({units:4,
+        inputShape:[2], 
+        activation:'sigmoid'
+});
 
-    // const tense = tf.tensor3d(values,shape,"int32");  
-    // const vtense = tf.variable(tense);
+const output = tf.layers.dense({
+    units:3,
+    inputShape:[4],
+    activation:'sigmoid'
+});
 
-    const a = tf.tensor2d(values,shapeA,"int32"); 
-    const shapeB = [3,5]; 
-    const b = tf.tensor2d(values,shapeB,"int32");  
-    //const c = a.matMul(b);
+model.add(hidden);
+model.add(output);
 
-    a.print();
-    b.print();
-    //c.print(); 
-    
-    //tense.print();
-    
-    
-}
+const sgdOpt = tf.train.sgd(0,1);
 
-function draw()
-{
+const config = {
+    optimizer:sgdOpt,
+    loss:'meanSquaredError'
+};
 
-}
+model.compile(config);
