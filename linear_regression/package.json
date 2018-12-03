@@ -1,15 +1,19 @@
 {
-  "name": "intro",
+  "name": "polinomial-regression",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "polinomial regression ",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run-server": "./node_modules/.bin/browser-sync start index.html --port 8080 --files --server"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  },
   "dependencies": {
-    "d3": "^5.7.0"
+    "d3": "^5.7.0",
+    "tfjs": "^0.6.0",
+    "p5": "^0.7.2"
   }
 }
