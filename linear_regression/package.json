@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "run-server": "./node_modules/.bin/browser-sync start index.html --port 8080 --files --server",
-    "convert2json":"node converter.js"
+    "convert2json":"node converter.js",
+    "test-it":"node ./src/test.js"
   },
   "author": "",
   "license": "ISC",

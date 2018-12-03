@@ -1,0 +1,30 @@
+{
+  "name": "lesson-03",
+  "version": "1.0.0",
+  "description": "tensorflow test application",
+  "main": "main.js",  
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "watch": "./node_modules/.bin/browser-sync start --port \"8080\" --baseDir \"..//.//\" --server --files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/caglardursun/TfTests.git"
+  },
+  "author": "Çağlar Dursun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caglardursun/TfTests/issues"
+  },
+  "homepage": "https://github.com/caglardursun/TfTests#readme",
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.13.5",
+    "node-gyp": "^3.8.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
